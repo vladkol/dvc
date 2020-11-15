@@ -134,7 +134,7 @@ class AzureTree(BaseTree):
     def exists(self, path_info, use_dvcignore=True):
         check_path = path_info.path
         item_exists = False
-        paths = self._list_paths(path_info.bucket, check_path, results_per_page=1)
+        paths = self._list_paths(path_info.bucket, check_path, items_per_page=1)
         for path in paths:
             # we only check a single result
             if check_path == path:
